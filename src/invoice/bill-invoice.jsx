@@ -1,5 +1,5 @@
 
-import React,{ useEffect, useState } from 'react';
+import React,{ useEffect, useState,useRef } from 'react';
 import  '../invoice.css';
 import { Config } from '../config/connect';
 import moment from 'moment';
@@ -17,7 +17,9 @@ const Invoice = ({ invoice }) => {
         console.error('Error fetching data:', error);
     }
 }
+
 useEffect(() => {
+   
     fetchData();
 }, []);
 return (
@@ -31,7 +33,7 @@ return (
         <table class="bill-details"  width="100%">
             <tbody>
                 <tr>
-                    <td colspan="2">ທີ່ຢູ່: <span>wrewerw wewrew</span></td>
+                    <td colspan="2">ທີ່ຢູ່: <span>{invoice}</span></td>
                 </tr>
                 <tr>
                     <td colspan="2">ໂທລະສັບ/Tel: <span>{data.branch_tel}</span></td>
@@ -44,7 +46,7 @@ return (
                   <td className=''>Date: {moment(data.sale_date).format('DD/MM/YYYY h:mm')}</td>
                 </tr>
                 <tr>
-                    <th colspan="2" class="center-align"><span class=""> ບິນຮັບເງິນສົດ</span></th>
+                    <th colspan="2" class="center-align"><h4 class=""> ບິນຮັບເງິນສົດ</h4></th>
                 </tr>
             </tbody>
         </table>

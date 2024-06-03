@@ -6,17 +6,19 @@ import axios from 'axios';
 import { Config, Urlimage } from '../../config/connect';
 import Alert from '../../utils/config';
 import numeral from 'numeral';
-// import Invoice from '../../invoice/bill-invoice';
+import Invoice from '../../invoice/bill-invoice';
+import Swal from 'sweetalert2';
 function FormSale() {
+
   const api = Config.urlApi;
   const img = Urlimage.url;
   const navigate = useNavigate();
-  const headleBack = () => {
-    navigate(`/home`);
-  }
-  const handleGoBack = () => {
-    navigate(-1);
-  };
+  // const headleBack = () => {
+  //   navigate(`/home`);
+  // }
+  // const handleGoBack = () => {
+  //   navigate(-1);
+  // };
   const userId = localStorage.getItem('user_uuid')
   const barnchId = localStorage.getItem('branch_Id')
   const inputRef = useRef(null);
@@ -322,12 +324,13 @@ const confirmOrder=()=>{
   }
 
   //==================== ບັນທຶກການຈ່າຍ
+  const [print, setPrint] = useState(false);
+  const [invoice, setInvoice] = useState('');
   const handlePayment = () => {
     axios.post(api + 'order/payment', order)
       .then(function (res) {
         if (res.status === 200) {
-          navigate(`/p-bill?=${res.data.id}`);
-          // setInvoice(res.data.id)
+          setInvoice(res.data.id);
           setData({
             first_name: '',
             last_name: '',
@@ -336,8 +339,8 @@ const confirmOrder=()=>{
           })
           setItemCart([])
           setShowPay(false);
-          handleModal(true);
-          showMessage(res.data.message, 'success');
+          // handleModal(true);
+          // showMessage(res.data.message, 'success');
           setCustom({
             customId: '',
             cus_fname: '',
@@ -356,6 +359,8 @@ const confirmOrder=()=>{
             balance_return: '0',
           })
           setBalanceReturn(0);
+          setPrint(true);
+          handlePrint();
         } else {
           showMessage(res.data.message, 'error');
         }
@@ -433,32 +438,43 @@ const confirmOrder=()=>{
     setActiveShow('')
   }
 
-  // const [invoice, setInvoice] = useState(null);
-//   const handlePrint = () => {
-//     const printContent = document.getElementById('printableArea').innerHTML;
-//     const originalContent = document.body.innerHTML;
-//     const afterPrint = () => {
-//         document.body.innerHTML = originalContent;
-//         window.removeEventListener('afterprint', afterPrint);
-//         window.location.reload();
-//     };
-//     window.addEventListener('afterprint', afterPrint);
-//     document.body.innerHTML = printContent;
-//     window.print();
-// };
-// if(invoice !==''){
-//   const printContent = document.getElementById('printableArea').innerHTML;
-//   const originalContent = document.body.innerHTML;
-//   const afterPrint = () => {
-//       document.body.innerHTML = originalContent;
-//       window.removeEventListener('afterprint', afterPrint);
-//       setInvoice(null)
-//   };
-//   window.addEventListener('afterprint', afterPrint);
-//   document.body.innerHTML = printContent;
-//   window.print();
-//   }
-    
+const printBill =()=>{
+
+  const printContent = document.getElementById('printableArea').innerHTML;
+    const originalContent = document.body.innerHTML;
+    const afterPrint = () => {
+        document.body.innerHTML = originalContent;
+        window.removeEventListener('afterprint', afterPrint);
+        window.location.reload();
+    };
+    window.addEventListener('afterprint', afterPrint);
+    document.body.innerHTML = printContent;
+    window.print();
+}
+  const handlePrint = () => {
+    Swal.fire({
+      title: "ການດຳເນິນງານສຳເລັດ",
+      icon: "success",
+      showCancelButton: true,
+      confirmButtonText: "ພິມບິນ",
+      cancelButtonText: "ປິດອອກ",
+      reverseButtons: true,
+      width: 400,
+      height:200,
+      confirmButtonColor: "#0fac29",
+      cancelButtonColor: "#ff5b57"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        printBill()
+        // handleModal(true)
+      }else{
+        setInvoice(null)
+        handleModal(true)
+      }
+    });
+};
+
+
   // ===================== \\
 
   const toaster = useToaster();
@@ -732,11 +748,11 @@ const confirmOrder=()=>{
       </div>
 
 
-      {/* {invoice !==null ? (
-          <div id="printableArea">
-            <Invoice invoice={invoice} />
-          </div>
-           ):''} */}
+      {print && (
+        <div id="printableArea">
+          <Invoice invoice={invoice} />
+        </div>
+      )}
 
       <Modal show={show} backdrop="static" centered  >
         <Modal.Body className='p-4'>
