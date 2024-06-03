@@ -3,7 +3,7 @@ import React,{useEffect,useState} from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import {SelectPicker,Placeholder } from 'rsuite';
 import {useTile, useOption,useType } from '../../utils/selectOption';
-import { Config,Urlimage} from '../../config/connenct';
+import { Config,Urlimage} from '../../config/connect';
 import axios from 'axios';
 export default function ViewPorductZone() {
     const api = Config.urlApi;

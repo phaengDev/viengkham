@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { SelectPicker, Input, Button } from 'rsuite';
 import { useNavigate, Link } from 'react-router-dom';
-import { Config } from '../../config/connenct';
+import { Config } from '../../config/connect';
 import { useUnite, useTile, useOption } from '../../utils/selectOption';
 function FormPorduct() {
     const api = Config.urlApi;

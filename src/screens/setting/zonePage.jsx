@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Modal, Button, SelectPicker, } from 'rsuite';
 import { useNavigate } from 'react-router-dom'
-import {Config} from '../../config/connenct';
+import {Config} from '../../config/connect';
 import axios from 'axios';
 import Swal from "sweetalert2";
 import Alert from '../../utils/config';

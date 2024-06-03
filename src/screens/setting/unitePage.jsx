@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Modal, Button} from 'rsuite';
-import {Config} from '../../config/connenct';
+import {Config} from '../../config/connect';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Swal from "sweetalert2";

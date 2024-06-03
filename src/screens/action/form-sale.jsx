@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import Modal from 'react-bootstrap/Modal';
 import { Input, Message, useToaster, InputGroup } from 'rsuite';
 import axios from 'axios';
-import { Config, Urlimage } from '../../config/connenct';
+import { Config, Urlimage } from '../../config/connect';
 import Alert from '../../utils/config';
 import numeral from 'numeral';
 // import Invoice from '../../invoice/bill-invoice';

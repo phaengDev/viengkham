@@ -1,5 +1,5 @@
 import React, { useEffect, useState, } from "react";
-import { Config, Urlimage } from "../../config/connenct";
+import { Config, Urlimage } from "../../config/connect";
 import axios from "axios";
 import numeral from 'numeral';
 import { Placeholder, Loader, SelectPicker } from 'rsuite';

@@ -5,7 +5,7 @@ import { useOption, useUnite, useTile, useZone } from '../../utils/selectOption'
 import Select from 'react-select'
 import axios from 'axios';
 import moment from 'moment';
-import { Config } from '../../config/connenct';
+import { Config } from '../../config/connect';
 import * as XLSX from 'xlsx';
 import { saveAs } from 'file-saver';
 function RormReceived() {

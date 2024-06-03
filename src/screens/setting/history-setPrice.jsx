@@ -2,7 +2,7 @@ import moment from 'moment'
 import React, { useState, useEffect } from 'react'
 import { DatePicker, SelectPicker } from 'rsuite';
 import { Link } from 'react-router-dom';
-import { Config } from '../../config/connenct';
+import { Config } from '../../config/connect';
 import numeral, { options } from 'numeral';
 import axios from 'axios';
 import { useType } from '../../utils/selectOption';

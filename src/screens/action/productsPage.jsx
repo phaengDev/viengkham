@@ -4,7 +4,7 @@ import { Input, Placeholder, Modal, Button } from 'rsuite';
 import Select from 'react-select'
 import { SelectPicker } from 'rsuite';
 import axios from 'axios';
-import { Config, Urlimage } from '../../config/connenct';
+import { Config, Urlimage } from '../../config/connect';
 import Alert from '../../utils/config';
 import Swal from "sweetalert2";
 import { useOption, useType, useTile } from '../../utils/selectOption';

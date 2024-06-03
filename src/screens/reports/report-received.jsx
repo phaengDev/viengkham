@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { DatePicker, SelectPicker, Button,Placeholder } from 'rsuite';
 import { useZone, useOption, useTile } from '../../utils/selectOption';
 import axios from 'axios';
-import { Config } from '../../config/connenct';
+import { Config } from '../../config/connect';
 import moment from 'moment';
 import * as XLSX from 'xlsx';
 import { saveAs } from 'file-saver';

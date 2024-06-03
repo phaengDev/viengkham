@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { Input, Modal, Button, InputGroup,InputPicker } from 'rsuite';
 import EyeIcon from '@rsuite/icons/legacy/Eye';
 import EyeSlashIcon from '@rsuite/icons/legacy/EyeSlash';
-import { Config } from '../../config/connenct';
+import { Config } from '../../config/connect';
 import axios from 'axios';
 import Swal from "sweetalert2";
 import Alert from '../../utils/config';

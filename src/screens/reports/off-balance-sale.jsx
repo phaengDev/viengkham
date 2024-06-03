@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { Loader } from 'rsuite';
 import axios from 'axios';
-import { Config } from '../../config/connenct';
+import { Config } from '../../config/connect';
 import Alert from '../../utils/config';
 export default function OffBalanceSale() {
     const api = Config.urlApi;

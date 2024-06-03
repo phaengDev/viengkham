@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import {SelectPicker, Placeholder } from 'rsuite';
 import { useOption, useTile, useZone } from '../../utils/selectOption';
 import axios from 'axios';
-import { Config, Urlimage } from '../../config/connenct';
+import { Config, Urlimage } from '../../config/connect';
 import numeral from 'numeral';
 function StockSales() {
     const api = Config.urlApi;

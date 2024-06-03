@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Modal, Button, Message, useToaster, Input, SelectPicker, InputGroup } from 'rsuite';
 import { Link } from 'react-router-dom'
 import axios from 'axios'
-import { Config } from '../../config/connenct';
+import { Config } from '../../config/connect';
 import numeral from 'numeral';
 import { useOption, useType } from '../../utils/selectOption';
 // import ChartPrice from '../Chart/chartUpdate-price';

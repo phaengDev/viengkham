@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Input, SelectPicker, Modal, Button } from 'rsuite';
 import { Link } from 'react-router-dom';
-import { Config, Urlimage } from '../../config/connenct';
+import { Config, Urlimage } from '../../config/connect';
 // import { Modal } from 'react-bootstrap';
 import axios from 'axios';
 import Select from 'react-select';

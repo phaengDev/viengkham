@@ -1,5 +1,5 @@
 import  { useState, useEffect } from "react";
-import { Config } from "../config/connenct";
+import { Config } from "../config/connect";
 const api = Config.urlApi;
 
 export function useProvince() {

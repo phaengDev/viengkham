@@ -1,7 +1,7 @@
 
 import React,{useEffect,useState} from 'react';
 import { Line } from 'react-chartjs-2';
-import { Config } from '../../config/connenct';
+import { Config } from '../../config/connect';
 import { Chart as ChartJS, LineElement, CategoryScale, LinearScale, PointElement, Title, Tooltip, Legend } from 'chart.js';
 ChartJS.register(LineElement, CategoryScale, LinearScale, PointElement, Title, Tooltip, Legend);
 

@@ -2,7 +2,7 @@ import React,{useEffect,useState} from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Input, SelectPicker,Placeholder } from 'rsuite';
 import { useZone, useUnite, useTile, useOption,useType } from '../../utils/selectOption';
-import { Config,Urlimage} from '../../config/connenct';
+import { Config,Urlimage} from '../../config/connect';
 import axios from 'axios';
 export default function ViewPorductTile() {
     const api = Config.urlApi;

@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 // import { useNavigate } from 'react-router-dom'; 
 import axios from 'axios';
-import {Config} from '../../config/connenct';
+import {Config} from '../../config/connect';
 import { Message, useToaster } from 'rsuite';
 function Login() {
   const api = Config.urlApi;

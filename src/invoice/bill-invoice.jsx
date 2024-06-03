@@ -1,7 +1,7 @@
 
 import React,{ useEffect, useState } from 'react';
 import  '../invoice.css';
-import { Config } from '../config/connenct';
+import { Config } from '../config/connect';
 import moment from 'moment';
 import numeral from 'numeral';
 const  api=Config.urlApi;

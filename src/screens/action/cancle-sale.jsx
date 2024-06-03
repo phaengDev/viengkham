@@ -4,7 +4,7 @@ import { SelectPicker, Input, DatePicker, InputGroup, Button, Tooltip, Whisper, 
 import { useStaff, useTile, useZone } from '../../utils/selectOption';
 import axios from 'axios';
 import moment from 'moment';
-import { Config } from '../../config/connenct';
+import { Config } from '../../config/connect';
 import Alert from '../../utils/config';
 import numeral from 'numeral';
 import Swal from "sweetalert2";

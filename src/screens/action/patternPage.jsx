@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Input, Message, useToaster, Placeholder, SelectPicker } from 'rsuite';
 import Select from 'react-select'
 import axios from 'axios';
-import { Config } from '../../config/connenct';
+import { Config } from '../../config/connect';
 import { useOption, useType, useTile } from '../../utils/selectOption';
 import numeral from 'numeral';
 import Alert from '../../utils/config';
